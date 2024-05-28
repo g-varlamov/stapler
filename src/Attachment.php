@@ -375,7 +375,7 @@ class Attachment implements AttachmentInterface, JsonSerializable
      */
     public function originalFilename()
     {
-        return $this->instance->getAttribute("{$this->name}_file_name");
+        return isset($this->instance) ? $this->instance->getAttribute("{$this->name}_file_name") : '';
     }
 
     /**
@@ -386,7 +386,7 @@ class Attachment implements AttachmentInterface, JsonSerializable
      */
     public function getInstanceClass()
     {
-        return get_class($this->instance);
+        return isset ($this->instance) ? get_class($this->instance) : '';
     }
 
     /**

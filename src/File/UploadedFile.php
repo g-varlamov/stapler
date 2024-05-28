@@ -97,7 +97,7 @@ class UploadedFile implements FileInterface
      */
     public function getSize()
     {
-        return $this->uploadedFile->getClientSize();
+        return $this->uploadedFile->getSize();
     }
 
     /**
